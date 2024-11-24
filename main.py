@@ -114,8 +114,8 @@ functions_list = [
 ]
 
 
-times = 10_000_000
-repeat = 8
+times = 5_000_000
+repeat = 3
 # times = 1000
 # repeat = 1
 
