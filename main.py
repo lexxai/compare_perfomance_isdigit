@@ -12,7 +12,7 @@ from perf_data.categoies import categories
 
 
 def plot_mesures_bar(
-    plot_results: dict,
+    plot_results: dict[str, list[float]],
     output_file: str = "performance_comparison.png",
     folder: Path = None,
     title: str = None,
@@ -43,7 +43,7 @@ def plot_mesures_bar(
 
 
 def plot_mesures(
-    plot_results: dict,
+    plot_results: dict[str, list[float]],
     output_file: str = "performance_comparison.png",
     folder: Path = None,
 ):
@@ -139,7 +139,6 @@ for cat, test_str in categories.items():
             f"avg: {avg_time_version:.4f} seconds. Result: {result_version}"
         )
 
-print(results)
 for i, cat in enumerate(categories):
     plot_mesures_bar(
         {k: [v[i]] for k, v in results.items()},
@@ -151,14 +150,3 @@ plot_mesures(results, folder=results_folder)
 save_csv(results, folder=results_folder)
 print("Press Enter to exit...")
 input()
-
-"""
-Python 3.13.0
-times=10000000, repeat=8
- - Version_1. Time: ['9.6431', '9.3966', '9.4082', '9.4500', '9.3949', '9.3880', '9.4951', '9.4736'] avg: 9.4562 seconds. Result: 2024
- - Version_2. Time: ['8.8718', '9.0103', '9.2408', '8.7917', '8.8005', '9.0065', '8.7919', '8.8034'] avg: 8.9146 seconds. Result: 2024
- - Version_3. Time: ['8.4679', '8.0702', '8.2425', '7.7790', '12.5577', '10.3317', '8.7200', '7.7399'] avg: 8.9886 seconds. Result: 2024
- - Version_4. Time: ['11.9411', '11.7733', '11.8226', '11.7166', '11.9001', '11.7232', '11.7850', '11.8588'] avg: 11.8151 seconds. Result: 2024
- - Version_5. Time: ['19.3780', '17.8619', '18.0036', '18.1159', '17.9091', '17.9927', '17.9564', '17.9369'] avg: 18.1443 seconds. Result: 2024
- - Version_6. Time: ['7.5048', '7.3104', '7.3142', '7.3944', '7.3068', '7.5241', '7.3036', '7.3219'] avg: 7.3725 seconds. Result: 2024
-"""
