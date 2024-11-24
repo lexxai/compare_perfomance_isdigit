@@ -1,12 +1,75 @@
 # Optimizing Performance: Python Speed Test for Digit Search in Strings
 
-⛓️ In reply to post: https://lnkd.in/e56KKsMp
+⛓️ In response to the original post: [Read the discussion here](https://lnkd.in/e56KKsMp).
 
-🪜 I wanted to check the real speeds of these methods, so I decided to conduct an experiment myself.
+🪜 I conducted an experiment to evaluate the efficiency of different Python methods for searching digits within strings, considering various string lengths from short to long. Below, I compare six different techniques and their strengths in extracting digits.
 
-I looked at how fast each method performs when searching for digits in short strings, and compared their efficiency in terms of execution time.
+## Categories for Testing
 
-After comparing several approaches, I will share my conclusions about which one is the best in terms of actually using Python for this task.
+The strings were categorized into four distinct groups based on their lengths:
+
+- **Short**: A brief string containing only a few characters.
+- **Middle**: A moderately sized string, about 256 characters.
+- **Long (1KB)**: A longer string, roughly 1 kilobyte, simulating paragraphs of text.
+- **Long (2KB)**: A significantly large string of about 2 kilobytes, suitable for document-like data.
+
+## Methods Compared
+
+Below are the six versions of digit extraction methods, each analyzed based on performance:
+
+### 1. **Version 1: Manual Iteration with List and `isdigit()`**
+   - **Description**: Iterates through each character of the string, checks if it's a digit with `char.isdigit()`, and appends it to a list.
+   - **Performance**:
+     - **Short**: 3.37 seconds
+     - **Middle**: 1.12 minutes
+     - **Long (1KB)**: 4.13 minutes
+     - **Long (2KB)**: 9.71 minutes
+
+### 2. **Version 2: List Comprehension with `isdigit()`**
+   - **Description**: Uses a list comprehension to filter digits, creating a list of digits in a single line using `char.isdigit()`.
+   - **Performance**:
+     - **Short**: 3.23 seconds
+     - **Middle**: 1.04 minutes
+     - **Long (1KB)**: 3.89 minutes
+     - **Long (2KB)**: 9.24 minutes
+
+### 3. **Version 3: `filter` with `str.isdigit`**
+   - **Description**: Uses the `filter` function with `str.isdigit`, which directly filters out non-digit characters and returns a filtered iterator.
+   - **Performance**:
+     - **Short**: **2.86 seconds** (Fastest)
+     - **Middle**: **36.56 seconds** (Fastest)
+     - **Long (1KB)**: **2.31 minutes** (Fastest)
+     - **Long (2KB)**: **5.39 minutes** (Fastest)
+
+### 4. **Version 4: Regular Expression with `re.findall`**
+   - **Description**: Uses a regular expression (`\d+`) to find all digit sequences in the string, returning a list of matches.
+   - **Performance**:
+     - **Short**: 4.42 seconds
+     - **Middle**: 47.71 seconds
+     - **Long (1KB)**: 2.83 minutes
+     - **Long (2KB)**: 6.49 minutes
+
+### 5. **Version 5: Precompiled Regular Expression with `re.findall`**
+   - **Description**: Utilizes a precompiled regex pattern (`re.compile`) for repeated digit searches with `re.findall`, aiming for faster execution with compiled patterns.
+   - **Performance**:
+     - **Short**: 7.13 seconds
+     - **Middle**: 50.33 seconds
+     - **Long (1KB)**: 2.87 minutes
+     - **Long (2KB)**: 6.53 minutes
+
+### 6. **Version 6: Precompiled Regex with `.findall` Method**
+   - **Description**: Uses a precompiled regex pattern (`re.compile`) and its `.findall()` method directly on the string to extract all digit sequences.
+   - **Performance**:
+     - **Short**: 2.93 seconds
+     - **Middle**: 45.87 seconds
+     - **Long (1KB)**: 2.79 minutes
+     - **Long (2KB)**: 6.45 minutes
+
+## Final Recommendation
+
+- **Best Method**: **Version 3** (`filter` with `str.isdigit`) is the clear winner across all measures.
+- **Why**: It is simple, readable, and performs exceptionally well for both small and large datasets.
+
 
 
 ## Result 
@@ -50,3 +113,31 @@ Category: 'long-2k'
  - Version 6. Time: ['386.7376', '387.3923', '387.0871'] avg: 387.0723 seconds. Result: 202420242024010510012024020120240331202404151002244202405202024061015334562024070178912345567899882024080120240915202430352024100578902002024092520241015202410202108765202411012024112099013456202420241125654343212024121030020241220202501312025021020252024
 
 ```
+
+### Diagrams
+#### Catergory: Short
+![Short](results/Darwin_3.13.0/performance_comparison_short.png)
+
+#### Catergory: Middle 256
+![Middle 256](results/Darwin_3.13.0/performance_comparison_middle-256.png)
+
+#### Catergory: Long 1K
+![Long 1K](results/Darwin_3.13.0/performance_comparison_long-1k.png)
+
+#### Catergory: Long 2K
+![Long 1K](results/Darwin_3.13.0/performance_comparison_long-2k.png)
+
+#### All Catergories
+![all categoties](results/Darwin_3.13.0/performance_comparison.png)
+
+
+
+### CSV of duration
+| Version | short | middle-256 | long-1k  | long-2k  |
+|---------|-------|------------|----------|----------|
+| Version 1 | 3.37 s | 1.12 m | 4.13 m | 9.71 m |
+| Version 2 | 3.23 s | 1.04 m | 3.89 m | 9.24 m |
+| Version 3 | 2.86 s | 36.56 s | 2.31 m | 5.39 m |
+| Version 4 | 4.42 s | 47.71 s | 2.83 m | 6.49 m |
+| Version 5 | 7.13 s | 50.33 s | 2.87 m | 6.53 m |
+| Version 6 | 2.93 s | 45.87 s | 2.79 m | 6.45 m |
