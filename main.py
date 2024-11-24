@@ -114,10 +114,10 @@ functions_list = [
 ]
 
 
-# times = 10_000_000
-# repeat = 8
-times = 1000
-repeat = 1
+times = 10_000_000
+repeat = 8
+# times = 1000
+# repeat = 1
 
 python_ver = platform.system() + "_" + platform.python_version()
 
