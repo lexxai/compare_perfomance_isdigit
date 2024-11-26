@@ -195,3 +195,15 @@ Category: 'long-2k'
 
 #### All Catergories
 ![all categoties](results/Darwin_3.12.5/performance_comparison.png)
+
+
+### CSV of duration 3.12.5
+
+| Version | short | middle-256 | long-1k  | long-2k  |
+|---------|-------|------------|----------|----------|
+| Version 1 | 3.01 s | 51.65 s | 3.22 m | 7.54 m |
+| Version 2 | 2.93 s | 48.15 s | 3.08 m | 7.33 m |
+| Version 3 | 3.10 s | 37.44 s | 2.40 m | 5.66 m |
+| Version 4 | 4.96 s | 52.88 s | 3.08 m | 7.05 m |
+| Version 5 | 7.78 s | 55.65 s | 3.13 m | 7.17 m |
+| Version 6 | 3.19 s | 50.61 s | 3.04 m | 7.04 m |
