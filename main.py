@@ -2,6 +2,7 @@ from pathlib import Path
 import timeit
 import csv
 import platform
+import os
 
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
@@ -119,12 +120,20 @@ repeat = 3
 # times = 1000
 # repeat = 1
 
-python_ver = platform.system() + "_" + platform.python_version()
+
+jit_status = jit_enabled = os.getenv('PYTHONJIT')
+python_ver = [platform.system(),platform.processor(),platform.python_version()]
+if jit_status:
+    python_ver.append(f"jit-{jit_status}")
+python_ver = "_".join(python_ver)
 
 results_folder = Path(__file__).parent / "results" / python_ver
 results_folder.mkdir(parents=True, exist_ok=True)
 
+
 print(f"{python_ver}, {times=}, {repeat=}")
+
+
 results = {fun_name: [] for _, fun_name in functions_list}
 
 for cat, test_str in categories.items():

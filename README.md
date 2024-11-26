@@ -80,7 +80,7 @@ Below are the six versions of digit extraction methods, each analyzed based on p
 
 ```
 % python main.py
-Darwin_3.13.0, times=5000000, repeat=3
+Darwin_i386_3.13.0, times=5000000, repeat=3
 
 Category: 'short'
  - Version 1. Time: ['3.4180', '3.3468', '3.3461'] avg: 3.3703 seconds. Result: 2024
@@ -118,19 +118,19 @@ Category: 'long-2k'
 
 ### Diagrams 3.13.0
 #### Catergory: Short
-![Short](results/Darwin_3.13.0/performance_comparison_short.png)
+![Short](results/Darwin_i386_3.13.0/performance_comparison_short.png)
 
 #### Catergory: Middle 256
-![Middle 256](results/Darwin_3.13.0/performance_comparison_middle-256.png)
+![Middle 256](results/Darwin_i386_3.13.0/performance_comparison_middle-256.png)
 
 #### Catergory: Long 1K
-![Long 1K](results/Darwin_3.13.0/performance_comparison_long-1k.png)
+![Long 1K](results/Darwin_i386_3.13.0/performance_comparison_long-1k.png)
 
 #### Catergory: Long 2K
-![Long 2K](results/Darwin_3.13.0/performance_comparison_long-2k.png)
+![Long 2K](results/Darwin_i386_3.13.0/performance_comparison_long-2k.png)
 
 #### All Catergories
-![all categoties](results/Darwin_3.13.0/performance_comparison.png)
+![all categoties](results/Darwin_i386_3.13.0/performance_comparison.png)
 
 
 
@@ -147,7 +147,7 @@ Category: 'long-2k'
 ### Output 3.12.5
 
 ```
-Darwin_3.12.5, times=5000000, repeat=3
+Darwin_i386_3.12.5, times=5000000, repeat=3
 
 Category: 'short'
  - Version 1. Time: ['2.9517', '3.0429', '3.0487'] avg: 3.0145 seconds. Result: 2024
@@ -184,19 +184,19 @@ Category: 'long-2k'
 
 ### Diagrams 3.12.5
 #### Catergory: Short
-![Short](results/Darwin_3.12.5/performance_comparison_short.png)
+![Short](results/Darwin_i386_3.12.5/performance_comparison_short.png)
 
 #### Catergory: Middle 256
-![Middle 256](results/Darwin_3.12.5/performance_comparison_middle-256.png)
+![Middle 256](results/Darwin_i386_3.12.5/performance_comparison_middle-256.png)
 
 #### Catergory: Long 1K
-![Long 1K](results/Darwin_3.12.5/performance_comparison_long-1k.png)
+![Long 1K](results/Darwin_i386_3.12.5/performance_comparison_long-1k.png)
 
 #### Catergory: Long 2K
-![Long 2K](results/Darwin_3.12.5/performance_comparison_long-2k.png)
+![Long 2K](results/Darwin_i386_3.12.5/performance_comparison_long-2k.png)
 
 #### All Catergories
-![all categoties](results/Darwin_3.12.5/performance_comparison.png)
+![all categoties](results/Darwin_i386_3.12.5/performance_comparison.png)
 
 ### Compare CSV
 
