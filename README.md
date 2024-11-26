@@ -13,7 +13,7 @@ The strings were categorized into four distinct groups based on their lengths:
 - **Long (1KB)**: A longer string, roughly 1 kilobyte, simulating paragraphs of text.
 - **Long (2KB)**: A significantly large string of about 2 kilobytes, suitable for document-like data.
 
-**Test enviroment**: macOS Sonoma 14.7.1, MacBook Air 13", 2017, Intel i5 1.6Ghz 2-Core.
+**Test enviroment**: macOS Sonoma 14.7.1, MacBook Air 13", 2019, Intel i5 1.6Ghz 2-Core.
 
 ## Methods Compared
 
