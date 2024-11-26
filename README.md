@@ -135,7 +135,7 @@ Category: 'long-2k'
 
 
 ### CSV of duration 3.13.0
-| Version | short | middle-256 | long-1k  | long-2k  |
+| Function | short | middle-256 | long-1k  | long-2k  |
 |---------|-------|------------|----------|----------|
 | Version 1 | 3.37 s | 1.12 m | 4.13 m | 9.71 m |
 | Version 2 | 3.23 s | 1.04 m | 3.89 m | 9.24 m |
@@ -200,9 +200,9 @@ Category: 'long-2k'
 
 ### Compare CSV
 
-#### CSV of duration 3.12.5
+#### Function Duration Metrics in Python 3.12.5
 
-| Version | short | middle-256 | long-1k  | long-2k  |
+| Function | short | middle-256 | long-1k  | long-2k  |
 |---------|-------|------------|----------|----------|
 | Version 1 | 3.01 s | 51.65 s | 3.22 m | 7.54 m |
 | Version 2 | **2.93 s** | 48.15 s | 3.08 m | 7.33 m |
@@ -211,8 +211,8 @@ Category: 'long-2k'
 | Version 5 | 7.78 s | 55.65 s | 3.13 m | 7.17 m |
 | Version 6 | 3.19 s | 50.61 s | 3.04 m | 7.04 m |
 
-#### CSV of duration 3.13.0
-| Version | short | middle-256 | long-1k  | long-2k  |
+#### Function Duration Metrics in Python 3.13.0
+| Function | short | middle-256 | long-1k  | long-2k  |
 |---------|-------|------------|----------|----------|
 | Version 1 | 3.37 s | 1.12 m | 4.13 m | 9.71 m |
 | Version 2 | 3.23 s | 1.04 m | 3.89 m | 9.24 m |
@@ -221,9 +221,9 @@ Category: 'long-2k'
 | Version 5 | 7.13 s | 50.33 s | 2.87 m | 6.53 m |
 | Version 6 | 2.93 s | 45.87 s | 2.79 m | 6.45 m |
 
-#### CSV of duration differences (%) 3.13.0 and 3.12.5
+#### CSV of Function Duration Differences (%) Between Python 3.13.0 and 3.12.5
 
-| Version | short | middle-256 | long-1k  | long-2k  |
+| Function | short | middle-256 | long-1k  | long-2k  |
 |---------|-------|------------|----------|----------|
 | Version 1 | 11.96% | 29.44% | 28.21% | 28.78% |
 | Version 2 | 9.27% | 30.79% | 26.60% | 26.46% |
