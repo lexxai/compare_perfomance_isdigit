@@ -182,16 +182,16 @@ Category: 'long-2k'
 
 ### Diagrams 3.12.5
 #### Catergory: Short
-![Short](results/Darwin_3.13.0/performance_comparison_short.png)
+![Short](results/Darwin_3.12.5/performance_comparison_short.png)
 
 #### Catergory: Middle 256
-![Middle 256](results/Darwin_3.13.0/performance_comparison_middle-256.png)
+![Middle 256](results/Darwin_3.12.5/performance_comparison_middle-256.png)
 
 #### Catergory: Long 1K
-![Long 1K](results/Darwin_3.13.0/performance_comparison_long-1k.png)
+![Long 1K](results/Darwin_3.12.5/performance_comparison_long-1k.png)
 
 #### Catergory: Long 2K
-![Long 2K](results/Darwin_3.13.0/performance_comparison_long-2k.png)
+![Long 2K](results/Darwin_3.12.5/performance_comparison_long-2k.png)
 
 #### All Catergories
-![all categoties](results/Darwin_3.13.0/performance_comparison.png)
+![all categoties](results/Darwin_3.12.5/performance_comparison.png)
